@@ -1,0 +1,102 @@
+name: Translation correction
+description: Suggest a fix to an already-shipped 8nOut translation, or flag an unclear English source string.
+title: "[translation] "
+labels: ["translation-suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make 8nOut read better in your language. This form is for
+        correcting a string that's already shipped — not for reporting a bug or
+        requesting a new feature.
+
+        Before you submit: please read [CONTRIBUTING.md](../../CONTRIBUTING.md) — it
+        explains how your suggestion gets used and what it means to submit here.
+
+        **Prefer GitHub's web-based file editor over a local git clone if you also
+        plan to open a Pull Request** — a commit from a local clone carries the
+        name and email from your own git configuration, which CONTRIBUTING.md
+        explains in more detail. This Issue Form itself only ever sees your GitHub
+        username, however you submit it.
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      description: Which language is this suggestion for?
+      options:
+        - "English (UK)"
+        - "Nederlands"
+        - "Deutsch"
+        - "Norsk (Bokmål)"
+        - "Español"
+        - "Italiano"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where does this text appear?
+      description: Pick the surface this string is on. Not sure? Pick "Not sure" — that's fine.
+      options:
+        - Web app
+        - iOS app
+        - Help Centre
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-text
+    attributes:
+      label: The current text
+      description: >-
+        Copy and paste the EXACT text as it currently appears in the app or Help
+        Centre — this is how we find the right string even if we don't know its
+        internal key. A screenshot in a comment after submitting also helps, but
+        isn't required.
+      placeholder: "Paste the exact current text here…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Your suggested fix
+      description: >-
+        What should it say instead? Please write the FULL corrected text, not just
+        a description of what's wrong with it.
+      placeholder: "Paste your suggested replacement text here…"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: review-scope
+    attributes:
+      label: Did you review just this one string, or the whole entry it's part of?
+      description: >-
+        For a Help Centre answer or a multi-sentence piece of text: did you check
+        only the specific sentence you're correcting, or read through the whole
+        surrounding entry/paragraph in your language? Either is genuinely useful —
+        this just tells us how much of the surrounding text to treat as reviewed.
+      options:
+        - Just this one string
+        - The whole surrounding entry/paragraph
+        - Not sure / not applicable
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Before you submit
+      options:
+        - label: >-
+            By submitting this suggestion you agree it may be used per
+            CONTRIBUTING.md's license terms.
+          required: true
+        - label: >-
+            Optional: also list my GitHub handle as a credited contributor
+            in this repo's CONTRIBUTORS.md.
+          required: false
