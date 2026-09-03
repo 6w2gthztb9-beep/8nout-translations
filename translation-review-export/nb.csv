@@ -21,7 +21,7 @@
 "web-app","common.club","Club","Klubb","","",""
 "web-app","common.unknownPlayer","Unknown player","Ukjent spiller","","",""
 "web-app","common.homeTable","Home table","Hjemmebord","","",""
-"web-app","common.new","New","","","",""
+"web-app","common.new","New",""Ny"","",""
 "web-app","common.you"," (You)"," (Deg)","","",""
 "web-app","common.matchesNoun.one","match","kamp","","",""
 "web-app","common.matchesNoun.other","matches","kamper","","",""
