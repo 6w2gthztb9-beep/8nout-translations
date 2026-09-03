@@ -7,4 +7,4 @@ Contributors who asked to be credited (via the checkbox on the
 form) are listed here by GitHub handle, roughly in the order their first
 suggestion was accepted.
 
-_No one yet — be the first!_
+- [@6w2gthztb9-beep](https://github.com/6w2gthztb9-beep) — Norwegian (`record.winRate`, `common.new`)
