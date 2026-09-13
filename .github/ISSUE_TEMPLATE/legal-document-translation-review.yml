@@ -1,0 +1,100 @@
+name: Legal document translation review (German)
+description: >-
+  Review the AI-drafted German translation of 8nOut's Privacy Policy or
+  Terms of Service. Read CONTRIBUTING-legal-documents.md first — this is a
+  different, heavier lane than the general translation-correction form.
+title: "[legal-de] "
+labels: ["legal-translation-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Please read [CONTRIBUTING-legal-documents.md](../CONTRIBUTING-legal-documents.md)
+        in full before filling this in** — it explains why this lane is separate
+        from the general
+        [translation-correction](../../issues/new?template=translation-correction.yml)
+        form, what kind of competence this needs, and what happens to what you
+        submit.
+
+        A few things worth repeating here, because they matter:
+        - This covers **only** the Privacy Policy and Terms of Service,
+          **German only**, for now.
+        - The German text you're reviewing is Claude's AI-drafted best effort.
+          Nobody has checked it yet. It is **not** 8nOut's actual German
+          Privacy Policy or Terms of Service, and it isn't in effect anywhere.
+        - Your review being accepted here does **not** mean this document is
+          cleared to publish — it stays unpublished and internal until 8nOut's
+          own legal review closes it out.
+        - Native fluency alone isn't enough for this specific form — see
+          CONTRIBUTING-legal-documents.md for what does count.
+
+  - type: dropdown
+    id: document
+    attributes:
+      label: Which document did you review?
+      options:
+        - "Privacy Policy (privacy-policy.de.md)"
+        - "Terms of Service (terms-of-service.de.md)"
+        - "Both"
+    validations:
+      required: true
+
+  - type: textarea
+    id: findings
+    attributes:
+      label: What did you find?
+      description: >-
+        Point to the specific section or sentence, quote the current German
+        text, and write out the FULL corrected text you'd suggest instead —
+        not just a description of what's wrong. If you read the whole document
+        and found nothing to change, say so; that's a useful result too.
+      placeholder: "Section / current text / suggested fix…"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: location-clause-check
+    attributes:
+      label: "One specific check: the precise-location grant clause"
+      description: >-
+        In the Privacy Policy, the section describing how a member grants
+        access to their precise home-table address is meant to be described on
+        a contract basis, not a consent basis — so it should NOT use
+        "Einwilligung" (or another consent-specific term) for that clause. Did
+        you check this specifically?
+      options:
+        - "Checked — it's correct (not phrased as Einwilligung/consent)"
+        - "Checked — I think it's wrong, see my findings above"
+        - "I didn't review the Privacy Policy / this clause"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: understanding
+    attributes:
+      label: Before you submit
+      options:
+        - label: >-
+            I understand this is a review of a legal document, not a casual
+            text check — my findings will be treated as the basis for a
+            compliance sign-off, not just a language polish.
+          required: true
+        - label: >-
+            By submitting this, I grant 8nOut a non-exclusive, worldwide,
+            royalty-free, perpetual license to use my suggested text, per
+            CONTRIBUTING-legal-documents.md's license terms.
+          required: true
+        - label: >-
+            Optional: also list my GitHub handle as a credited contributor in
+            this repo's CONTRIBUTORS.md.
+          required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        **One more step, done privately, not in this form:** please also
+        email `translations@8nout.com` with your real name and the competence
+        basis that qualifies you for this lane (see
+        CONTRIBUTING-legal-documents.md). That's what turns this into an
+        actual sign-off — this issue alone doesn't. It's never posted
+        publicly; only this issue and an optional CONTRIBUTORS.md credit are.
