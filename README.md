@@ -20,3 +20,13 @@ no git experience needed.
 Currently covers: Nederlands, Deutsch, Norsk (Bokmål), Español, Italiano.
 
 A human reviews every suggestion — nothing here merges automatically.
+
+## Reviewing the Privacy Policy / Terms of Service (German)
+
+Separate from the string-by-string lane above: 8nOut's Privacy Policy and
+Terms of Service are also being translated into German, and reviewing
+those works differently — it needs an actual legal-translation competence
+basis, not just fluency, and a review being accepted doesn't mean the
+document is cleared to publish. See
+[CONTRIBUTING-legal-documents.md](CONTRIBUTING-legal-documents.md) if
+that's something you're positioned to help with.
